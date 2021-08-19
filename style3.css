@@ -1,0 +1,394 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** NOS AYUDA CON EL REM ***/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/** Globales **/
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    /* background-color:#F4AEAC; */
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+    text-align: center;
+    color: #C0C0C0;
+}
+
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1,h2,h3,h4,h5{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: var(--secundario);
+    
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+
+/** Utilidades **/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 15px;
+}
+
+.centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+.boton{
+    padding: 6px 30px;
+    background-color: white;
+}
+
+/*** header **/
+.main-section{
+    /* width: 100vw; */
+    height: 100vh;
+    background-image: url(img/mario.png);
+    background-size: 40% 110%;
+    background-repeat: no-repeat;
+    background-position: 75% -50px;
+    background-color:#F4AEAC;
+}
+header img {
+    width: 90px;
+    height: 50px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2%;
+}
+
+header ul{
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+.menu-icons  li i{
+    padding-right: 15px;
+    border-right: 1px solid red; 
+}
+
+.menu-icons li:last-child i{
+    border-right: none;
+}
+.texto-centrado > p{
+    color: white;
+}
+
+/*** NEW COLLECTION **/
+.new-collection{
+    text-align: center;
+    color: white;
+    margin: 0 2%;
+}
+
+.texto-centrado > button{
+    border: none;
+    padding: 20px 60px;
+    cursor: pointer;
+    background: white;
+    font-weight: bold;
+} 
+.texto-centrado{
+    margin: 150px 0 0 0;
+}
+
+
+/** PORTAFOLIO **/
+.portafolio{
+    height: 100vh;
+    background:white;
+    display: flex;
+}
+.portafolio > .middle{
+    width: 50%;
+}
+
+.line{
+    background-color: white;
+    height: 3px;
+    width: 30px;
+    margin: 15px 15px 15px 0;
+}
+#card1{
+    background-color: #c3997d;
+    background-image: url(img/silueta.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 70% 0;
+    height: 100%;
+}
+.text-card1{
+    position: relative;
+    top: 70%;
+    padding-left: 30px;
+    color: white;
+    font-size: 22px;
+    width: 200px;
+}
+.text-card1 > h5{
+    text-align: initial;
+}
+
+#card2{
+    display: flex;
+    flex-wrap: wrap;
+}  
+
+#card2 > .box{
+    width: 50%;
+    height: 50%;
+}
+.box > button{
+    justify-content: center;
+    margin-top: 30px;
+}
+.text-center{
+    padding-top: 45px;
+}
+
+.box-cara-homero{
+    background-image: url(img/homero.png);
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    background-position: center;
+}
+.box-shoes{
+    background-image: url(img/shoe.png);
+    background-repeat: no-repeat;
+    background-size: 88% 52% ;
+    background-position: 70% 90%;
+    background-color: #EAC9BA;
+}
+.box-purse{
+    background-image: url(img/camera.png);
+    background-repeat: no-repeat;
+    background-size: 88% 52% ;
+    background-position: 70% 90%;
+    background-color: #F6F6F6;
+}
+
+/*** RESPONSIVE TABLET****/
+
+@media(max-width: 320px){
+    .main-section{
+        width: 100vh;
+        background-position: 60% 10px;
+        background-size: 40% 100%;
+    }
+    .texto-centrado{
+        margin: 30px 0 0 0;
+        width: 400px;
+    }
+    .portafolio{
+        display: flex;
+        flex-direction: column;
+    }
+    .portafolio > .middle{
+        width: 560px;
+    }
+    .text-card1 {
+        top: 60%;
+    }
+    #card2{
+        display: flex;
+        flex-direction: row;
+    }
+    #card2 > .box{
+        width: 100%;
+        height: 50%;
+    }
+
+    /****Registro***/
+
+}
+
+@media(max-width: 768px){
+   
+}
+
+@media(max-width: 1140px){
+
+}
+
+/** ACCESSORIES ***/
+.espacio{
+    margin: 0;
+    padding: 0;
+}
+.accessories{
+    background:#F7F7F7;
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+    display: flex; 
+}
+.accessories > .middle{
+    width: 50%;
+    padding: 0px 100px;  
+
+}
+.centrar-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.boton-accessories{
+    border: 1px solid black;
+    padding: 15px 50px;
+    background-color: #F0F0F0;
+    width: 200px;
+    cursor: pointer;
+   
+}
+.accessories-imagen{
+    background-image: url(img/face.png);
+    background-size: 90%  95%;
+    background-repeat: no-repeat;
+}
+.centrar-box h4{
+    font-size: 10px;
+}
+
+
+@media(max-width: 768px){
+   .accessories{
+       display: flex;
+       flex-wrap: wrap;
+       height: 600px;
+   }
+   .accessories > .middle{
+    width: 100%;
+    height: 300px;
+    padding: 0px 100px;  
+    }
+    .accessories-imagen{
+        background-size: 80%  99%;
+        background-position: center;
+    }
+}
+
+/*** Registro ****/
+.registro{
+    width: 100%;
+    height: 400px;
+    border: 1px solid black; 
+}
+.texto-h2{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.texto-h2 > h2{
+    width: 360px;
+    text-align: center;
+}
+.correo{
+    display: flex;
+    justify-content: center;
+    margin:  30px 0px;
+}
+.input{
+    border: 1px solid black;
+    width: 250px;
+    height: 35px;
+    padding: 0px 10px;
+    display: flex;
+    align-content: center;
+}
+.register{
+    border: 1px solid black;
+    width: 180px;
+    background: black;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+}
+
+.plataformas{
+    display: flex;
+    justify-content: center;
+}
+
+li i{
+    margin-right: 15px;
+    font-size: 20px;
+    color: #B8B8B6;
+}
+.color-morado{
+    color: #A0877E;
+}
+
+@media (max-width: 320px ){
+    .correo{
+        margin: 5px;
+    }
+    .input{
+        width: 150px;
+        font-size: 13px;
+    }
+    .register{
+        width: 100px;
+        font-size: 15px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 500px ){
+    .input{
+        width: 210px;
+        font-size: 13px;
+    }
+    .register{
+        width: 110px;
+        font-size: 15px;
+        font-size: 13px;
+    }
+}
